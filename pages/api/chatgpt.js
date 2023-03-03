@@ -10,8 +10,8 @@ export default async function handler(req, res) {
       model: "text-davinci-003",
       prompt: text,
       signature:
-        "85959697b88765732e7c044d52afb96ed9b3c8abe0feb566f6d8efdcf7f8f09f",
-      timestamp: new Date().getTime(),
+        "ab17177ce626a4348dcfa6c7861373465674668620c46761a8b3ee246d7bc70d",
+      timestamp: 1677864958,
     }
   );
 
