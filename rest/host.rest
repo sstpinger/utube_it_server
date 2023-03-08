@@ -1,0 +1,8 @@
+@baseUrl = https://utube-it-server.vercel.app
+
+POST {{baseUrl}}/api/hosts/add
+Content-Type: application/json
+
+{
+    "domain": "utube-it-server.vercel.app"
+}
