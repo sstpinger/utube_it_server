@@ -6,6 +6,7 @@ export default async function handler(req, res) {
   let { domain } = req.body;
 
   let { address } = await ipLookup(domain);
+
   let host = await HostModel.create({ hostname: domain, ip: address });
 
   res.status(200).json(host);
