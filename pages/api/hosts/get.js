@@ -3,7 +3,8 @@ import "../../../lib/mongoose_connection";
 import HostModel from "../../../lib/models/host.model";
 
 export default async function handler(req, res) {
-  let time = new Date(req.query.time);
+  let time = Number(req.query.time || 0);
+  time = new Date(time);
 
   const hosts = await HostModel.find({ createdAt: { $gte: time } });
 
