@@ -1,5 +1,5 @@
-# @baseUrl = https://utube-it-server.vercel.app
-@baseUrl = http://localhost:3000
+@baseUrl = https://utube-it-server.vercel.app
+# @baseUrl = http://localhost:3000
 
 POST {{baseUrl}}/api/hosts/add
 Content-Type: application/json
