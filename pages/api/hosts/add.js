@@ -1,4 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import "../../../lib/mongoose_connection";
 import HostModel from "../../../lib/models/host.model";
 import ipLookup from "../../../lib/ip_lookup";
 
