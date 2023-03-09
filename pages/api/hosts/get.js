@@ -3,9 +3,9 @@ import "../../../lib/mongoose_connection";
 import HostModel from "../../../lib/models/host.model";
 
 export default async function handler(req, res) {
-  const hosts = await HostModel.find();
+  let time = new Date(req.query.time);
 
-  const txt = hosts.map((e) => `${e.ip} ${e.hostname}`).join("\n");
+  const hosts = await HostModel.find({ createdAt: { $gte: time } });
 
-  res.status(200).send(txt);
+  res.status(200).send(hosts);
 }
