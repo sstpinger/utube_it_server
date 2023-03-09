@@ -7,7 +7,7 @@ export default async function handler(req, res) {
 
   let { address } = await ipLookup(domain);
 
-  // let host = await HostModel.create({ hostname: domain, ip: address });
+  let host = await HostModel.create({ hostname: domain, ip: address });
 
-  res.status(200).json({ domain, address });
+  res.status(200).json(host);
 }
