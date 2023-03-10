@@ -1,0 +1,6 @@
+@baseUrl = https://utube-it-server.vercel.app
+
+
+GET {{baseUrl}}/api/mirror/geonode
+  ?limit=10
+  &page=1

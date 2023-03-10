@@ -8,5 +8,5 @@ export default async function handler(req, res) {
 
   const hosts = await HostModel.find({ createdAt: { $gte: time } });
 
-  res.status(200).send(hosts);
+  res.status(200).send({ hosts });
 }
